@@ -1,58 +1,65 @@
-type,public name,grade,project points,effect,action cost,action,steal points
-fpga (F),Daniel,phd,6,,1F,"Flip a coin, if head put two fpga phd in your team",1
-fpga (F),El Ruben,phd,10,"Once per turn, flip a coin, if head heal 2 PP from a researcher",1F1L,,3
-fpga (F),Stanco,phd,6,,1F1L,,2
-fpga (F),Stanco,post/rta,18,,1F1L,"Flip a coin, if hear both active researcher cannot attack next turn.",6
-pat (P),Pic,phd,10,,2L,This attack does 3 dmg for each different coin typer,1+
-pat (P),Pikachu,phd,6,"Once per turn, discard a coin and draw 2",1P1L,,2
-pat (P),Edoro,phd,6,"Once per turn, you can attach an additional coin on your resercer",1L,,2
-pat (P),Cesco,phd,6,,1P1L,,2
-pat (P),Cesco,post/rta,10,"Once per turn, look the 5 top card of your deck, keep all the coins, and put the rest on the bottom",1P1L,,3
-pure (U),Mr K,phd,6,"If this card is in your discard pile, put on your team with 2 dmg counter",1U1L,,2
-pure (U),Baz,phd,6,"Once per turn, you can move up to 2 dmg on the board",1U1L,,2
-pure (U),Saint Justice,phd,10,,1U1L,This attack does dmg equal the ammount of dmg in your team,-
-pure (U),Tigortto,phd,6,"Once per turn, load one coin from the discard to itself",1U1L,,2
-qrng (Q),Berta,phd,14,,1Q1L,Discard 5 card from the enemy deck,-
-qrng (Q),Mattia,phd,6,"When enter, search 1 professor card from your deck",2Q,,2
-qrng (Q),Ave,phd,6,"When enter, search 1 item card from your deck",1Q1L,,2
-qrng (Q),Ave,post,10,"When enter, search 2 items card from your deck",1Q1L,,3
-source (S),Bella,phd,6,"Once per turn, draw cards untile you have N cards where N is the number of source researcher on your field.",2S1L,,7
-source (S),DT€,phd,6,,4S,,12
-source (S),Davfdiddisfh,phd,6,"When enter, once per turn, draw cards untile you have 7 cards in your hand",1S1L,,2
-source (S),Costa,phd,6,,1S,,3
-source (S),Costa,post,14,,2L,Copy an attack from your team without paying the coin cost,-
-source (S),Massimin,phd,6,,4S,Steal 6 points from two different resercer in the enemy team,2
-weak (W),Don matteo,phd,10,,1W,For each coin you discard on your field you steal 2 luxor coin from the opponent,-
-weak (W),Tigrotto,post,10,"Once per turn, load two weak coint to himself",2W,,6
-weak (W),Julius,phd,6,,1W1L,,2
-weak (W),Julius,post,10,"Once per turn, load how many weak coin from your hand to a resercher",1W1L,,3
-professor,Prof. Pino,,,"Discard your hand, draw 7",,,
-professor,Prof. Villolaser,,,Both player discard their hands and draw 4 cards,,,
-professor,Prof. Crow,,,Both player shuffle their hand in the deck and draw 4,,,
-professor,Prof. Renti,,,Add one coin from your discard to your researcher and search a item card from your deck,,,
-professor,Sig. Buongiornolacqua,,,Both player shuffle their hand and draws cards equal to the ammount milestones,,,
-item,KO meeting,,,"If it is the first turn of the game, you can put 2 phd on your team",,,
-item,Pino call,,,Return one researcher from your team to your hand,,,
-item,Bug fix,,,"Discard a card from your hand, flip a coin, if head search for a card in your deck",,,
-item,Big-O,,,"Discard 2 cards, search for a researcher in your deck",,,
-item,Mid-O,,,"Discard 1 card, search for a phd in your deck",,,
-item,Small-O,,,Seach for a Post in your deck,,,
-item,Amplifier,,,Add +2 dmg on the current attack,,,
-item,End-of-the-day,,,Put up to two coins and two researcher from your discard to your deck,,,
-item,Packet lunch,,,+2 PP on your active researcher,,,
-item,Pizza lunch,,,"Discard a card, +4 PP on your active researcher",,,
-item,Da Tony lunch,,,discard all the coin on your researcher and riprestinate all the PP,,,
-item,Power meeter,,,You and your enemy switch your active researcher,,,
-item,FPGA error,,,"Flip a coin, if head remove a coin from a enemy researcher",,,
-item,Luxor break,,,Remove one laboratory from the field,,,
-item,Luxor inventory,,,"Discard 1 card, add 4 coind from your discard to your hand",,,
-lab,Nano,,,"Flip a coin, if head riprestinate 1 PP from your active researcher",,,
-lab,Micro,,,Researcher cannot activate their ability,,,
-lab,Bathroom,,,"Every time a researcher enter in the field, it takes 1 dmg",,,
-lab,Quantum,,,"Mill the 3 cards on top of your deck, you can keep all the items among them in your hand",,,
-lab,QKD,,,Add one coin from your discard to your hand,,,
-lab,Aula dottorandi,,,"End the turn, draw up to 7 cards",,,
-lab,Sala pranzo,,,Both player can have up to 3 non active researcher in the field,,,
-lab,CO2,,,,,,
-lab,Pico,,,You can axcellerate 1 coin from your hand to your active researcher adding 2 dmg on the active ,,,
-lab,Femto,,,,,,
+id,type,public name,grade,project points,effect,action cost,action,steal points
+1,coin,(L) Luxor,,,,,,
+2,coin,(F) FPGA,,,,,,
+3,coin,(P) PAT,,,,,,
+4,coin,(U) Pure,,,,,,
+5,coin,(Q) QRNG,,,,,,
+6,coin,(S) Source,,,,,,
+7,coin,(W) Weak,,,,,,
+8,(F) FPGA,Daniel,phd,6,,1F,"Flip a coin, if head put two fpga phd in your team",1
+9,(F) FPGA,El Ruben,phd,10,"Once per turn, flip a coin, if head heal 2 PP from a researcher",1F1L,,3
+10,(F) FPGA,Stanco,phd,6,,1F1L,,2
+11,(F) FPGA,Stanco,post,18,,1F1L,"Flip a coin, if hear both active researcher cannot attack next turn.",6
+12,(P) PAT,Pic,phd,10,,2L,This attack does 3 dmg for each different coin typer,1+
+13,(P) PAT,Pikachu,phd,6,"Once per turn, discard a coin and draw 2",1P1L,,2
+14,(P) PAT,Edoro,phd,6,"Once per turn, you can attach an additional coin on your resercer",1L,,2
+15,(P) PAT,Cesco,phd,6,,1P1L,,2
+16,(P) PAT,Cesco,post,10,"Once per turn, look the 5 top card of your deck, keep all the coins, and put the rest on the bottom",1P1L,,3
+17,(U) Pure,Mr K,phd,6,"If this card is in your discard pile, put on your team with 2 dmg counter",1U1L,,2
+18,(U) Pure,Baz,phd,6,"Once per turn, you can move up to 2 dmg on the board",1U1L,,2
+19,(U) Pure,Saint Justice,phd,10,,1U1L,This attack does dmg equal the ammount of dmg in your team,-
+20,(U) Pure,Tigortto,phd,6,"Once per turn, load one coin from the discard to itself",1U1L,,2
+21,(Q) QRNG,Berta,phd,14,,1Q1L,Discard 5 card from the enemy deck,-
+22,(Q) QRNG,Sushi king,phd,6,"When enter, search 1 professor card from your deck",2Q,,2
+23,(Q) QRNG,Ave,phd,6,"When enter, search 1 item card from your deck",1Q1L,,2
+24,(Q) QRNG,Ave,post,10,"When enter, search 2 items card from your deck",1Q1L,,3
+25,(S) Source,Bella,phd,6,"Once per turn, draw cards untile you have N cards where N is the number of source researcher on your field.",2S1L,,7
+26,(S) Source,DT€,phd,6,,4S,,12
+27,(S) Source,Davfdiddisfh,phd,6,"When enter, once per turn, draw cards untile you have 7 cards in your hand",1S1L,,2
+28,(S) Source,Costa,phd,6,,1S,,3
+29,(S) Source,Costa,post,14,,2L,Copy an attack from your team without paying the coin cost,-
+30,(S) Source,Massimin,phd,6,,4S,Steal 6 points from two different resercer in the enemy team,2
+31,(W) Weak,Don matteo,phd,10,,1W,For each coin you discard on your field you steal 2 luxor coin from the opponent,-
+32,(W) Weak,Tigrotto,post,10,"Once per turn, load two weak coint to himself",2W,,6
+33,(W) Weak,Julius,phd,6,,1W1L,,2
+34,(W) Weak,Julius,post,10,"Once per turn, load how many weak coin from your hand to a resercher",1W1L,,3
+35,professor,Prof. Pino,,,"Discard your hand, draw 7",,,
+36,professor,Prof. Villolaser,,,Both player discard their hands and draw 4 cards,,,
+37,professor,Prof. Crow,,,Both player shuffle their hand in the deck and draw 4,,,
+38,professor,Prof. Renti,,,Add one coin from your discard to your researcher and search a item card from your deck,,,
+39,professor,Sig. Buongiornolacqua,,,Both player shuffle their hand and draws cards equal to the ammount milestones,,,
+40,item,KO meeting,,,"If it is the first turn of the game, you can put 2 phd on your team",,,
+41,item,Pino call,,,Return one researcher from your team to your hand,,,
+42,item,Bug fix,,,"Discard a card from your hand, flip a coin, if head search for a card in your deck",,,
+43,item,Big-O,,,"Discard 2 cards, search for a researcher in your deck",,,
+44,item,Mid-O,,,"Discard 1 card, search for a phd in your deck",,,
+45,item,Small-O,,,Seach for a Post in your deck,,,
+46,item,Amplifier,,,Add +2 dmg on the current attack,,,
+47,item,End-of-the-day,,,Put up to two coins and two researcher from your discard to your deck,,,
+48,item,Packet lunch,,,+2 PP on your active researcher,,,
+49,item,Pizza lunch,,,"Discard a card, +4 PP on your active researcher",,,
+50,item,Da Tony lunch,,,discard all the coin on your researcher and riprestinate all the PP,,,
+51,item,Power meeter,,,You and your enemy switch your active researcher,,,
+52,item,FPGA error,,,"Flip a coin, if head remove a coin from a enemy researcher",,,
+53,item,Luxor break,,,Remove one laboratory from the field,,,
+54,item,Luxor inventory,,,"Discard 1 card, add 4 coind from your discard to your hand",,,
+55,lab,Nano,,,"Flip a coin, if head riprestinate 1 PP from your active researcher",,,
+56,lab,Micro,,,Researcher cannot activate their ability,,,
+57,lab,Bathroom,,,"Every time a researcher enter in the field, it takes 1 dmg",,,
+58,lab,Quantum,,,"Mill the 3 cards on top of your deck, you can keep all the items among them in your hand",,,
+59,lab,QKD,,,Add one coin from your discard to your hand,,,
+60,lab,Aula dottorandi,,,"End the turn, draw up to 7 cards",,,
+61,lab,Sala pranzo,,,Both player can have up to 3 non active researcher in the field,,,
+62,lab,CO2,,,Nothing,,,
+63,lab,Pico,,,You can axcellerate 1 coin from your hand to your active researcher adding 2 dmg on the active ,,,
+64,lab,Femto,,,Nothing,,,
