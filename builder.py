@@ -2,6 +2,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 import pandas as pd
+import textwrap
 
 # Open an Image
 
@@ -21,28 +22,41 @@ effect_line = 470
 action_line = 700
 
 
-def print_card(image, name, type, project_points=None, grade=None, effect_description=None, action_cost=None, action_description=None, action_steal_points=None, color=color):
-    image.text((effect_row, padding), name, font=text, fill=color)
+def draw_multiple_line_text(img, xy, text, font, fill):
+    draw = ImageDraw.Draw(img)
+    image_width, image_height = img.size
+    y_text = xy[1]
+    lines = textwrap.wrap(text, width=40)
+    for line in lines:
+        line_width, line_height = font.getsize(line)
+        draw.text(((image_width - line_width) / 2, y_text),
+                  line, font=font, fill=fill)
+        y_text += line_height
+
+
+def print_card(img, name, type, project_points=None, grade=None, effect_description=None, action_cost=None, action_description=None, action_steal_points=None, text_color=color):
+    draw = ImageDraw.Draw(img)
+    draw.text((effect_row, padding), name, font=text, fill=text_color)
 
     if not pd.isna(project_points):
-        image.text((width - padding - font_size * 2, padding), str(int(project_points)), font=text, fill=color)
+        draw.text((width - padding - font_size * 2, padding), str(int(project_points)), font=text, fill=text_color)
 
-    image.text((effect_row, padding + new_line), type, font=text, fill=color)
+    draw.text((effect_row, padding + new_line), type, font=text, fill=text_color)
 
     if not pd.isna(grade):
-        image.text((effect_row, padding + 2 * new_line), grade, font=text, fill=color)
+        draw.text((effect_row, padding + 2 * new_line), grade, font=text, fill=text_color)
 
     if not pd.isna(effect_description):
-        image.text((effect_row, effect_line), "Effect", font=text, fill=color)
-        image.text((effect_row, effect_line + new_line), effect_description, font=text, fill=color)
+        draw.text((effect_row, effect_line), "Effect", font=text, fill=text_color)
+        draw.text((effect_row, effect_line + new_line), effect_description, font=text, fill=text_color)
     if not pd.isna(action_description):
-        image.text((effect_row, action_line), "Action", font=text, fill=color)
-        image.text((effect_row + 100, action_line), action_cost, font=text, fill=color)
-        image.text((effect_row, action_line + new_line), action_description, font=text, fill=color)
+        draw.text((effect_row, action_line), "Action", font=text, fill=text_color)
+        draw.text((effect_row + 100, action_line), action_cost, font=text, fill=text_color)
+        draw.text((effect_row, action_line + new_line), action_description, font=text, fill=text_color)
         if pd.api.types.is_number(action_steal_points):
-            image.text((width - effect_row - font_size * 2, action_line), str(int(action_steal_points)), font=text, fill=color)
+            draw.text((width - effect_row - font_size * 2, action_line), str(int(action_steal_points)), font=text, fill=text_color)
         else:
-            image.text((width - effect_row - font_size * 2, action_line), action_steal_points, font=text, fill=color)
+            draw.text((width - effect_row - font_size * 2, action_line), action_steal_points, font=text, fill=text_color)
 
 
 # MAIN
@@ -51,20 +65,19 @@ df = pd.read_csv('database.csv')
 
 for index, row in df.iterrows():
     img = Image.open('template/blank-template.png')
-    image = ImageDraw.Draw(img)
     # drawings
     if row["type"] == "coin":
-        print_card(image=image, name=row["public name"], type=row["type"], color=(0, 0, 0))
+        print_card(img=img, name=row["public name"], type=row["type"], text_color=(0, 0, 0))
     if row["type"] in ("(F) FPGA", "(P) PAT", "(U) Pure", "(Q) QRNG", "(S) Source", "(W) Weak"):
-        print_card(image=image, name=row["public name"], type=row["type"], effect_description=row["effect"],
+        print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"],
                    project_points=row["project points"], grade=row["grade"], action_cost=row["action cost"], action_description=row["action"], action_steal_points=row["steal points"],
-                   color=(0, 0, 0))
+                   text_color=(0, 0, 0))
     if row["type"] == "professor":
-        print_card(image=image, name=row["public name"], type=row["type"], effect_description=row["effect"], color=(50, 0, 0))
+        print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"], text_color=(90, 0, 0))
     if row["type"] == "item":
-        print_card(image=image, name=row["public name"], type=row["type"], effect_description=row["effect"], color=(0, 50, 0))
+        print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"], text_color=(0, 90, 0))
     if row["type"] == "lab":
-        print_card(image=image, name=row["public name"], type=row["type"], effect_description=row["effect"], color=(0, 50, 50))
+        print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"], text_color=(0, 90, 90))
     # print("cards/TL-S001-ID{:03d}.png".format(row["id"]))
     img.save("cards/TL-S001-ID{:03d}.png".format(row["id"]))
 
