@@ -50,9 +50,10 @@ def print_card(img, name, type, project_points=None, grade=None, effect_descript
         draw_multiple_line_text(img, (effect_row, effect_line), "Effect", font=text, fill=text_color)
         draw_multiple_line_text(img, (effect_row, effect_line + new_line), effect_description, font=text, fill=text_color)
     if not pd.isna(action_description):
+        draw_multiple_line_text(img, (effect_row, action_line + new_line), action_description, font=text, fill=text_color)
+    if not pd.isna(action_cost):
         draw.text((effect_row, action_line), "Action", font=text, fill=text_color)
         draw.text((effect_row + 100, action_line), action_cost, font=text, fill=text_color)
-        draw_multiple_line_text(img, (effect_row, action_line + new_line), action_description, font=text, fill=text_color)
         if pd.api.types.is_number(action_steal_points):
             draw.text((width - effect_row - font_size * 2, action_line), str(int(action_steal_points)), font=text, fill=text_color)
         else:
