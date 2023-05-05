@@ -65,19 +65,24 @@ def print_card(img, name, type, project_points=None, grade=None, effect_descript
 df = pd.read_csv('database.csv')
 
 for index, row in df.iterrows():
-    img = Image.open('template/blank-template.png')
+    # img = Image.open('template/blank-template.png')
     # drawings
     if row["type"] == "coin":
+        img = Image.open('template/coin-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], text_color=(0, 0, 0))
     if row["type"] in ("(F) FPGA", "(P) PAT", "(U) Pure", "(Q) QRNG", "(S) Source", "(W) Weak"):
+        img = Image.open('template/researcher-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"],
                    project_points=row["project points"], grade=row["grade"], action_cost=row["action cost"], action_description=row["action"], action_steal_points=row["steal points"],
                    text_color=(0, 0, 0))
     if row["type"] == "professor":
+        img = Image.open('template/prof-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"], text_color=(90, 0, 0))
     if row["type"] == "item":
+        img = Image.open('template/item-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"], text_color=(0, 90, 0))
     if row["type"] == "lab":
+        img = Image.open('template/lab-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"], text_color=(0, 90, 90))
     # print("cards/TL-S001-ID{:03d}.png".format(row["id"]))
     img.save("cards/TL-S001-ID{:03d}.png".format(row["id"]))
