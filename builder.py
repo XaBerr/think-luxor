@@ -71,7 +71,10 @@ for index, row in df.iterrows():
         img = Image.open('template/coin-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], text_color=(0, 0, 0))
     if row["type"] in ("(F) FPGA", "(P) PAT", "(U) Pure", "(Q) QRNG", "(S) Source", "(W) Weak"):
-        img = Image.open('template/researcher-template.png')
+        if row["grade"] == "phd":
+            img = Image.open('template/phd-template.png')
+        else:
+            img = Image.open('template/post-template.png')
         print_card(img=img, name=row["public name"], type=row["type"], effect_description=row["effect"],
                    project_points=row["project points"], grade=row["grade"], action_cost=row["action cost"], action_description=row["action"], action_steal_points=row["steal points"],
                    text_color=(0, 0, 0))
