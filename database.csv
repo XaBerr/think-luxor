@@ -67,3 +67,5 @@ id,type,public name,grade,project points,effect,attack cost,attack,dmg,thinkluxo
 66,[U] Pure,Luke,phd,6,"If this card is in your bench, researcher in your bench cannot take damage from the opponent",1U,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID066.png?n=1
 67,[S] Source,Luke,post,10,,1L,This attack deals 2 dmg points to all the researchers on the field,-,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID067.png?n=1
 68,[P] PAT,Alexa,phd,6,"Once per turn, you can look the top 6 cards of your deck, choose a items cards among them, and then add it to your hand. After that shuffle your deck. This card has no retreve cost.",1P1L,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID068.png?n=1
+69,professor,Quango Police,,,"Chose one benched researcher in your opponent team, that became the active",,,,
+70,professor,Matera team,,,"Untile the end of the next turn, no one can active items",,,,
