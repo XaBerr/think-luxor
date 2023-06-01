@@ -6,11 +6,11 @@ id,type,public name,grade,project points,effect,attack cost,attack,dmg,thinkluxo
 5,coin,[Q] QRNG,,,,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID005.png?n=1
 6,coin,[S] Source,,,,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID006.png?n=1
 7,coin,[W] Weak,,,,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID007.png?n=1
-8,[F] FPGA,Daniel,phd,6,"When this card is played from your hand to the field, put up to 2 FPGA phd students from your deck to your bench",1F,"When this card attacks, both players switch their active researche with another one in the bench",1,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID008.png?n=1
+8,[F] FPGA,Daniel,phd,6,"When this card is played from your hand to the field, put up to 2 FPGA phd students from your deck to your bench",1F,"When this card attacks, both players switch their active researche with another one in the bench",3,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID008.png?n=1
 9,[F] FPGA,El Ruben,phd,10,"Once per turn, flip a coin, if head heal 2 PP from a researcher on the field and draw a card",1F,Attach up to 2 coins from your deck to up to two researchers on the bench,3,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID009.png?n=1
 10,[F] FPGA,Stanco,phd,6,,1F,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID010.png?n=1
-11,[F] FPGA,Stanco,post,18,,1F1L,"Flip a coin, if head the current enemy active researcher cannot attack next turn.",4,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID011.png?n=1
-12,[P] PAT,Pic,phd,10,,2L,This attack does 3 dmg for each different coin types,1+,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID012.png?n=1
+11,[F] FPGA,Stanco,post,18,"If this is your active researcher, your opponent cannot retive their active researcher",1F1L,"Flip a coin, if head the current enemy active researcher cannot attack next turn.",4,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID011.png?n=1
+12,[P] PAT,Pic,phd,10,,1P1L,This attack does 3 dmg for each different coin. This bonus count maximim 15 more damage.,1+,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID012.png?n=1
 13,[P] PAT,Enrica,phd,6,"Once per turn, discard a coin from your hand and draw 2 cards from the deck",1P1L,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID013.png?n=1
 14,[P] PAT,Edoro,phd,6,"Once per turn, you can attach an additional coin on your resercer",1L,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID014.png?n=1
 15,[P] PAT,Cesco,phd,6,,1P1L,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID015.png?n=1
@@ -46,7 +46,7 @@ id,type,public name,grade,project points,effect,attack cost,attack,dmg,thinkluxo
 45,item,Small-O,,,Seach for a Post in your deck and put it on your hand,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID045.png?n=1
 46,item,Amplifier,,,Add +2 dmg on the current attack,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID046.png?n=1
 47,item,End-of-the-day,,,Put up to two coins and two researcher from your discard to your deck,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID047.png?n=1
-48,item,Packet lunch,,,+2 PP on your active researcher,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID048.png?n=1
+48,item,Short circuit,,,This card let you attack a benched researcher form your opponent team. The damage cannot exeed 6 pp.,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID048.png?n=1
 49,item,Pizza lunch,,,"Discard a card, +4 PP on your active researcher",,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID049.png?n=1
 50,item,Da Tony lunch,,,Discard all the coin on your researcher and riprestinate all the PP,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID050.png?n=1
 51,item,Power meter,,,You and your enemy both choose a researcher in your respective bench and swap it with the active,,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID051.png?n=1
@@ -66,6 +66,6 @@ id,type,public name,grade,project points,effect,attack cost,attack,dmg,thinkluxo
 65,lab,Closet,,,"If a researcher is knocked out while this card is on the field, send it to the removal zone",,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID065.png?n=1
 66,[U] Pure,Luke,phd,6,"If this card is in your bench, researcher in your bench cannot take damage from the opponent",1U,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID066.png?n=1
 67,[S] Source,Luke,post,10,,1L,This attack deals 2 dmg points to all the researchers on the field,-,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID067.png?n=1
-68,[P] PAT,Hattori Vanzo,phd,6,"Once per turn, you can look the top 6 cards of your deck, choose a items cards among them, and then add it to your hand. After that shuffle your deck. This card has no retreve cost.",1P1L,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID068.png?n=1
+68,[P] PAT,Hattori Vanzo,phd,6,"Once per turn, if this is your active researcher, you can look the top 6 cards of your deck, choose a items cards among them, and then add it to your hand. After that shuffle your deck. This card has no retreve cost.",1P1L,,2,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID068.png?n=1
 69,professor,Quango Police,,,"Chose one benched researcher in your opponent team, that became the active",,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID069.png?n=1
 70,professor,Matera team,,,"Untile the end of the next turn, no one can active items",,,,https://raw.githubusercontent.com/XaBerr/think-luxor/main/cards/TL-S001-ID070.png?n=1
